@@ -8,7 +8,9 @@ const scoreC = document.querySelector("#comp-score");
 
 const drawGame = () => {
     console.log("Game was a draw.")
-    msg.innerText = "Game was drawn. Try again."
+    msg.innerText = "Game was drawn. Try again!";
+    msg.style.backgroundColor = "violet";
+    msg.style.color = "black";
 }
 
 const genCompChoice =() => {
@@ -22,6 +24,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
         console.log("Hurrah! You Win.");
         msg.innerText = `Hurrah! You Win. ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
+        msg.style.color = "white";
         userScore++;
         scoreU.innerText = userScore;
     }
@@ -29,6 +32,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
         console.log("Oops! You lose.");
         msg.innerText = `Oops! You lose. ${compChoice} beats ${userChoice}`;
         msg.style.backgroundColor = "red";
+        msg.style.color = "white";
         compScore++;
         scoreC.innerText = compScore;
     }
